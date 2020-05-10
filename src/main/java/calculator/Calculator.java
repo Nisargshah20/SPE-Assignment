@@ -5,7 +5,7 @@ public class Calculator {
         System.out.println("20 + 20 = " + add(20, 20));
         System.out.println("20 - 20 = " + subtract(20,20));
         System.out.println("20 * 20 = " + multiply(20,20));
-        //System.out.println("6 / 3 = " + divide(6,3));
+        System.out.println("20 / 20 = " + divide(20,20));
     }
 
     public static int add(int a, int b){
@@ -20,5 +20,13 @@ public class Calculator {
         return a * b;
     }
 
-
+    public static double divide(int a, int b) {
+        double result;
+        if (b == 0) {
+            throw new IllegalArgumentException("Divisor cannot divide by zero");
+        } else {
+            result = Double.valueOf(a)/Double.valueOf(b);
+        }
+        return result;
+    }
 }

@@ -37,4 +37,19 @@ public class CalculatorTests {
         Assert.assertEquals(expectedResult, result);;
     }
 
+    @Test
+    public void testDivide() {
+        int a = 100;
+        int b = 100;
+        double expectedResult = 1.0;
+        double result = calculator.divide(a, b);
+        Assert.assertEquals(expectedResult, result,0.00005);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testDivideByZero() {
+        int a = 100;
+        int b = 0;
+        calculator.divide(a, b);
+    }
 }
