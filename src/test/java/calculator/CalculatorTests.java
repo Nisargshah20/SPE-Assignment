@@ -28,4 +28,13 @@ public class CalculatorTests {
         Assert.assertEquals(expectedResult, result);
     }
 
+    @Test
+    public void testMultiply() {
+        int a = 100;
+        int b = 100;
+        long expectedResult = 10000;
+        long result = calculator.multiply(a, b);
+        Assert.assertEquals(expectedResult, result);;
+    }
+
 }
