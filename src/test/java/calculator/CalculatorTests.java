@@ -16,7 +16,16 @@ public class CalculatorTests {
         int b = 100;
         int expectedResult = 200;
         long result = calculator.add(a, b);
-        Assert.assertEquals(expectedResult, result);;
+        Assert.assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void testSubtract() {
+        int a = 100;
+        int b = 100;
+        int expectedResult = 0;
+        long result = calculator.subtract(100, 100);
+        Assert.assertEquals(expectedResult, result);
     }
 
 }
